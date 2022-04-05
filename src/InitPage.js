@@ -1,9 +1,7 @@
-import arrowRight from './img/arrow-right-thick.png';
-import arrowLeft from './img/arrow-left-thick.png';
-// import circleSmall from './img/circle-small.png';
+import arrowRight from './img/icon/arrow-right-thick.png';
+import arrowLeft from './img/icon/arrow-left-thick.png';
 
 function InitPage() {
-  console.log('hi');
   // Define arrow icons src
   const right = new Image();
   right.src = arrowRight;
