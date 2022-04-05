@@ -4,3 +4,65 @@
     margin: 0;
     font-size: 20px;
 }
+#main{
+    display: flex;
+    flex-direction: column;
+}
+
+#header{
+    height: 10%;
+    width: 100%;
+    border: solid black 1px;
+
+}
+
+#content{
+    display: flex;
+    height: 1300px;
+    padding: 150px;
+    
+}
+.arrow{
+    transform: scale(3);
+}
+#left{
+    display: flex;
+    width: 15%;
+    align-self: center;
+    justify-content: center;
+
+}
+#mid{
+    width: 70%;
+    border: solid black 1px;
+
+}
+#right{
+    display: flex;
+    width: 15%;
+    align-self: center;
+    justify-content: center;
+}
+
+#imageContainer{
+    display: flex;
+    height: 90%;
+    border: solid black 1px;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+#markers{
+    display: flex;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+#markerContent{
+width: 30%;
+height: 50%;
+border: solid black 1px;
+
+}
