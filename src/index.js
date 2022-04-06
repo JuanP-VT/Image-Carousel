@@ -1,6 +1,8 @@
-import initEvents from './initEvents';
-import InitPage from './InitPage';
+import defineImages from './defineImages';
+import initPage from './initPage';
+import loadEvents from './loadEvents';
 import './style.css';
 
-InitPage();
-initEvents();
+const myImages = defineImages();
+initPage(myImages);
+loadEvents();
