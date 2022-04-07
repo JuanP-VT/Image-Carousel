@@ -1,4 +1,5 @@
 function loadEvents() {
+  // Events for my arrows
   const buttons = document.querySelectorAll('.arrow');
   buttons.forEach((element) => {
     element.addEventListener('click', (e) => {
@@ -14,6 +15,9 @@ function loadEvents() {
       console.log(currentIndex);
       // Remove display image
       activeImage.removeAttribute('data-status');
+      // Remove current navDot highlighted
+      const navDots = [...document.querySelector('#markerContent').children];
+      navDots[currentIndex].removeAttribute('data-highlight');
       //
       // Check what button action is press
       const btnAction = e.target.getAttribute('data-state');
@@ -34,6 +38,27 @@ function loadEvents() {
       }
       // Display Next image
       arrayOfImages[currentIndex].setAttribute('data-status', 'active');
+      // Highlight next navDot
+      navDots[currentIndex].setAttribute('data-highlight', 'on');
+    });
+  });
+
+  // Load events for navigation dots
+  const navDots = document.querySelectorAll('.navDot');
+  navDots.forEach((element) => {
+    element.addEventListener('click', () => {
+      const referenceIndex = element.getAttribute('data-index');
+      // Remove visible image
+      const visibleImage = document.querySelector('[data-status]');
+      const arrayOfImages = [...document.querySelector('#imageContainer').children];
+      const indexOfVisibleImage = arrayOfImages.findIndex((img) => img === visibleImage);
+      arrayOfImages[indexOfVisibleImage].removeAttribute('data-status');
+      // Remove navDot highlight
+      const navDotsArray = [...navDots];
+      navDotsArray[indexOfVisibleImage].removeAttribute('data-highlight');
+      // Display new visible image
+      arrayOfImages[referenceIndex].setAttribute('data-status', 'active');
+      navDotsArray[referenceIndex].setAttribute('data-highlight', 'on');
     });
   });
 }

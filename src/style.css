@@ -4,6 +4,11 @@
     margin: 0;
     font-size: 20px;
 }
+body{
+    height: 100vh;
+    background-color: rgb(46, 45, 45);
+    overflow: hidden;
+}
 #main{
     display: flex;
     flex-direction: column;
@@ -26,7 +31,6 @@
 
 #mid{
     width: 70%;
-    border: solid black 1px;
     position: relative;
     justify-content: center;
 
@@ -54,21 +58,23 @@
 .arrow{
     position: absolute;
     transform: scale(2);
-    opacity: 0.2;
+    opacity: 0.3;
     outline: 1px solid black;
     border: none;
     border-radius: 2px;
     z-index: 2;
+    background-color: transparent;
+
 }
 .arrow:hover{
-    background-color: red;
+    background-color: aliceblue;
 }
 #arrowLeft{
-    left: 10px;
+    left: 30px;
     top: 50%;
 }
 #arrowRight{
-    right: 10px;
+    right: 30px;
     top: 50%;
 }
 
@@ -80,12 +86,22 @@
 }
 
 #markerContent{
+display: flex;
 width: 30%;
 height: 50%;
 border: solid black 1px;
+justify-content: center;
+border-radius: 20px;
+
 
 }
-
+.navDot:hover{
+    transform: scale(1.4);
+    cursor: pointer;
+}
 [data-status]{
     opacity: 1 !important;
+}
+[data-highlight]{
+    transform: scale(1.8);
 }
